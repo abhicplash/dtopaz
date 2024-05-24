@@ -13,16 +13,16 @@ function Footer() {
       <div className="flex-col flex gap-3">
         <Link to={"/"}>
           <h1 className="text-4xl font-bold text-[#c08f52] text-center md:text-left">
-            DJ
+            Diana Topaz
           </h1>
         </Link>
-        <p className="w-64 text-[#a7babb] ">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet,
-          cumque repellat voluptatum itaque molestiae, inventore reprehenderit
+        <p className="w-64 text-[#a7babb] text-center">
+          Jewellery Designed by Diana Alshehhi. Customized gold and diamonds
+          selection💎💍 Delivery worldwide 🌎Order through whatsApp 📲0505590994
         </p>
       </div>
-      <div>
-        <h1 className="font-bold text-xl">Links</h1>
+      <div className="flex flex-col gap-3">
+        <h1 className="font-bold text-xl font-Numbers">Links</h1>
         <ul>
           <Link to={"/"}>
             <li>Home</li>
@@ -38,17 +38,17 @@ function Footer() {
           </Link>
         </ul>
       </div>
-      <div>
+      <div className="flex flex-col gap-3 text-center">
         <h1 className="font-bold text-xl">Contact US</h1>
         <h1 className="flex  items-center gap-3">
           <IoLocation /> Dubai ,UAE-57068
         </h1>
         <h6 className="flex  items-center gap-3">
-          <IoCall /> +973 356249
+          <IoCall /> +971505590994
         </h6>
         <h3 className="flex items-center gap-3">
           <FaEnvelope />
-          hello@example.com
+          info@Dtopaz.com
         </h3>
       </div>
     </div>

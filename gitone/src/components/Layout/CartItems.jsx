@@ -28,15 +28,16 @@ function CartItems() {
   }
 
   return (
-    <div className="flex px-32 gap-5 py-10 ">
-      <div className="md:w-[70%] border   rounded-xl my-10">
+    <div className="flex md:flex-row flex-col items-center md:items-start md:px-32 gap-5 py-10 ">
+      <div className="md:w-[70%] w-80 border   rounded-xl my-10 bg-blue-50">
         <div className="flex justify-between items-center p-5">
           <h1 className="  font-Numbers font-semibol text-2xl">Cart</h1>
           <h1
             onClick={() => {
               handleClearCart();
             }}
-            className="text-sm capitalize flex gap-1 font-semibold font-Numbers cursor-pointer
+            className="text-sm capitalize flex gap-1 
+            font-semibold font-Numbers cursor-pointer
              text-red-600 active:text-red-900"
           >
             <IoMdClose className="text-lg" /> clear cart
@@ -47,16 +48,17 @@ function CartItems() {
             <div>
               <div
                 key={list.product_id}
-                className="border rounded-lg m-5 flex items-center justify-between px-1 pr-2"
+                className="border rounded-lg m-5 flex md:flex-row flex-col md:gap-0 gap-5  items-center 
+                justify-between px-1 pr-2 py-5 bg-white "
               >
-                <div className="flex items-center">
+                <div className="flex md:flex-row flex-col items-center">
                   <img
                     src={list.image_url}
                     alt="image_jewel"
                     className="w-32 h-32 m-3 rounded-md border"
                   />
-                  <div className="font-Numbers">
-                    <h1 className="text-xl font-semibold">
+                  <div className="font-Numbers md:text-start text-center">
+                    <h1 className="text-xl font-semibold text-[#15303e]">
                       {list.product_code}
                     </h1>
                     <h1>{list.article}</h1>
@@ -80,7 +82,7 @@ function CartItems() {
                   />
                 </div>
                 <div>
-                  <h1>{list.mrp} AED</h1>
+                  <h1 className="text-lg font-bold text-[#15303e] font-Numbers">{list.mrp} AED</h1>
                 </div>
                 <IoMdClose
                   onClick={() => {
