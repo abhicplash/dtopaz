@@ -7,11 +7,11 @@ import img from "../../Assets/Images/bennermodels/2.jpg";
 const HomeAbout = () => {
   return (
     <div
-      className="border-b border-[#e0d5af] w-full py-6 gap-5 md:gap-0
+      className="bg-blue-50  w-full py-6 gap-5 md:gap-0
      md:py-0 md:h-[100vh] px-5 md:px-36 flex md:flex-row flex-col 
       items-center justify-between  text-[#2e728f] "
     >
-      <div
+      <divbo
         className=" md:flex bg-five w-80 md:w-96 h-80 md:h-[30rem]
        bg-center bg-cover shadow-md shadow-[#e0d5af] relative rounded-lg"
       />

@@ -45,17 +45,18 @@ function Ringjewels() {
                 return (
                   <div
                     key={index}
-                    className="font-org w-56 h-96 bg-white flex flex-col
-                justify-center  items-center border border-[#c08f52] shadow-sm shadow-[#e0d5af]"
+                    className="font-org md:w-56  w-32 h-56 md:h-96 bg-white flex flex-col
+                justify-center  items-center border  border-[#c08f52]
+                 shadow-sm shadow-[#e0d5af]"
                   >
                     <img
                       src={jwel.image_url}
                       alt=""
-                      className="h-72 w-full  "
+                      className="h-40 md:h-72 w-full md:mt-4  "
                     />
                     <div className="flex justify-between items-center w-full p-3 ">
                       <div className="text-left flex flex-col gap-1 text-[#2e728f]">
-                        <h1 className=" text-lg capitalize font-bold font-Numbers">
+                        <h1 className=" md:text-lg capitalize font-bold font-Numbers">
                           {jwel.product_code}
                         </h1>
                         <h1 className="font-Numbers font-bold text-xs">
@@ -81,7 +82,8 @@ function Ringjewels() {
               {totalPages.map((page, index) => (
                 <button
                   key={index}
-                  className=" cursor-pointer border text-[#15303e] border-[#c08f52] py-1 px-3 
+                  className=" cursor-pointer border text-[#15303e]
+                   border-[#c08f52] py-1 px-3 
            shadow-sm justify-center items-center active:text-red-600"
                   onClick={(e) => {
                     setPageNumber(e.target.innerHTML);

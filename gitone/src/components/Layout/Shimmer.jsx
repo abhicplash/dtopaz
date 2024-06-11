@@ -6,8 +6,9 @@ function Shimmer() {
     <div className="flex flex-wrap gap-9 md:px-32 justify-center pb-10   ">
       {twenty.map((list) => (
         <div
-          className="font-org w-56 h-96 bg-yellow-100 
-       border border-[#c08f52] shadow-sm shadow-[#e0d5af]"
+          className="font-org md:w-56 w-32 h-52 md:h-96 bg-white flex flex-col
+          justify-center  items-center border border-[#c08f52]
+           shadow-sm shadow-[#e0d5af]"
         />
       ))}
     </div>
