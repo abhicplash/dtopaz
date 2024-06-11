@@ -13,30 +13,20 @@ function HomeBanner() {
     md:items-center md:pl-36  relative"
     >
       <div className="text-center md:text-left flex flex-col items-center md:items-start gap-3">
-        <h1 className="text-5xl text-[#c08f52] font-org uppercase  ">
-          {/* Proud Emirati brand is promising to bring happiness through the
-          beautiful topaz stone */}
+        <h1 className="text-3xl md:text-5xl text-[#c08f52] font-org uppercase  ">
           Diana Topaz, <br />
           the symbol of <br /> prosperity & abundance
-          {/* unique & Aesthetic <br /> hand made Designed <br /> jewellery */}
         </h1>
-        <p className="text- text-[#a7babb] font-Numbers capitalize pt-5 md:pt-0  ">
-          promising to bring happiness through the beautiful topaz stone <br />{" "}
-          which is the signature of the brand and the symbol of <br />{" "}
-          prosperity and abundance
+        <p className="text- text-[#a7babb] font-Numbers capitalize px-6 md:px-0  pt-5 md:pt-0  ">
+          promising to bring happiness through the beautiful topaz stone{" "}
+          <br className="md:flex hidden" /> which is the signature of the brand
+          and the symbol of <br className="md:flex hidden" /> prosperity and
+          abundance
         </p>
-        {/* <Link to={"/shop"}>
-          <button
-            className="border-2 border-[#a7babb] rounded-full px-6 py-1 justify-center w-44 font-org
-          text-xl  flex items-center gap-4 text-[#e0d5af] hover:text-[#c08f52] hover:border-[#c08f52] duration-700"
-          >
-            Shop now
-            <FaAnglesRight className="" />
-          </button>
-        </Link> */}
+
         <Link to={"/shop"}>
           <button
-            className="border border-[#a7babb]  rounded-full px-6 justify-center w-44 font-org
+            className="border border-[#a7babb] mt-3 md:mt-0  rounded-full px-6 justify-center w-44 font-org
           text-lg py-1  flex items-center gap-4 text-[#e0d5af] hover:text-[#c08f52] hover:border-[#c08f52] duration-700"
           >
             Shop now

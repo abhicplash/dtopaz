@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FaShoppingCart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { FaBarsStaggered } from "react-icons/fa6";
+import logo from '../../Assets/logo/logo.png'
 
 function Header() {
   const [view, setView] = useState(false);
@@ -11,9 +12,12 @@ function Header() {
      border-[#a7babb] px-5 md:px-36 w-full h-14 md:h-16 flex items-center justify-between "
     >
       <Link to={"/"}>
-        <h1 className="text-3xl text-[#c08f52] hover:scale-105 duration-700 font-bold ">
-        Diana Topaz
-        </h1>
+        <div className="flex justify-center items-center ">
+          <img src={logo} alt="" className="w-20 h-14 "/>
+          {/* <h1 className="text-3xl text-[#c08f52] hover:scale-105 duration-700 font-bold ">
+            Diana Topaz
+          </h1> */}
+        </div>
       </Link>
       <ul className="hidden md:flex gap-12 text- items-center font-semibold ">
         <Link to={"/"}>

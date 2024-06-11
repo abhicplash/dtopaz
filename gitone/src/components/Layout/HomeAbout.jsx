@@ -23,7 +23,7 @@ const HomeAbout = () => {
       />
       <div className="flex flex-col gap-9">
         <h1
-          className="text-5xl uppercase font-org 
+          className="text-3xl md:text-5xl uppercase font-org 
          text-center md:text-left"
         >
           what we offers
@@ -31,7 +31,7 @@ const HomeAbout = () => {
         <div className="flex flex-col gap-5 pl-5 ">
           <div>
             <h1
-              className="flex items-center text-2xl
+              className="flex items-center text-xl md:text-2xl
              font-org capitalize gap-3 font-bold"
             >
               <GiCrystalEarrings className="text-[#c08f52]" />
@@ -47,7 +47,7 @@ const HomeAbout = () => {
           </div>
           <div>
             <h1
-              className="flex items-center text-2xl font-org 
+              className="flex items-center text-xl md:text-2xl font-org 
             capitalize gap-3 font-bold"
             >
               <GiHeartNecklace className="text-[#c08f52]" />
@@ -61,7 +61,7 @@ const HomeAbout = () => {
           </div>
           <div>
             <h1
-              className="flex items-center text-2xl font-org capitalize
+              className="flex items-center text-xl md:text-2xl font-org capitalize
              gap-3 font-bold"
             >
               <GiBigDiamondRing className="text-[#c08f52]" />
