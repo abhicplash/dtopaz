@@ -35,7 +35,7 @@ function Header() {
       </ul>
       {view ? (
         <ul
-          className="flex md:hidden flex-col text-2xl absolute z-50 bg-[#15303e] 
+          className="flex md:hidden flex-col text-2xl absolute z-50 bg-[#2e728f]
         w-full left-0 top-14 py-16 text-center justify-center items-center gap-5 h-72
          border-[#a7babb] border-b-2 duration-700"
         >
