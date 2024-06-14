@@ -11,7 +11,7 @@ function Earingjewels() {
   const [pageNumber, setPageNumber] = useState(1);
 
   useEffect(() => {
-    fetch(`http://localhost/api/products?article=earring&page=${pageNumber}`)
+    fetch(`https://api.dtopaz.com/api/products?article=earring&page=${pageNumber}`)
       .then((response) => response.json())
       .then((result) => {
         if (result.data) {

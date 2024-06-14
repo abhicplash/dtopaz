@@ -43,6 +43,7 @@ function CartItems() {
             <IoMdClose className="text-lg" /> clear cart
           </h1>
         </div>
+        {console.log(cartItems)}
         {cartItems.map((list) => {
           return (
             <div>

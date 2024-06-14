@@ -13,7 +13,7 @@ function Product() {
   const [single, setSingle] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost/api/product/${productId}`)
+    fetch(`https://api.dtopaz.com/api/product/${productId}`)
       .then((response) => response.json())
       .then((result) => {
         if (result) {

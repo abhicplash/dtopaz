@@ -13,7 +13,7 @@ function NecklaceJewel() {
   // const [linkAPi, setLinkApi] = useState(fetchLink);
   // const [finalApi, setFinalApi] = useState(``);
   useEffect(() => {
-    fetch(`http://localhost/api/products?article=necklace&page=${pageNumber}`)
+    fetch(`https://api.dtopaz.com/api/products?article=necklace&page=${pageNumber}`)
       .then((response) => response.json())
       .then((result) => {
         if (result.data) {
