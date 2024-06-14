@@ -34,13 +34,13 @@ function HomeBanner() {
           </button>
         </Link>
       </div>
-      <div className="flex gap-3 relative  md:w-[70%]  ">
+      <div className="flex gap-3 relative md:justify-start justify-center  md:w-[70%]  ">
         <img
           src={bgpic}
           alt=""
           className="rounded-xl md:rounded-sm shadow-sm 
-           md:w-[28rem] md:h-[30rem] mt-5 md:mt-0 h-80 w-80 
-            ml-5 md:ml-0 "
+           md:w-[28rem] md:h-[30rem] mt-5 md:mt-0 h-56 w-56 
+             md:ml-0 "
         />
         <img
           src={fgpic}

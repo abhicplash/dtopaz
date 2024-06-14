@@ -11,14 +11,14 @@ const HomeAbout = () => {
      md:py-0 md:h-[100vh] px-5 md:px-36 flex md:flex-row flex-col 
       items-center justify-between  text-[#2e728f] "
     >
-      <divbo
-        className=" md:flex bg-five w-80 md:w-96 h-80 md:h-[30rem]
+      <div
+        className=" md:flex bg-five w-56 h-56 md:w-96  md:h-[30rem]
        bg-center bg-cover shadow-md shadow-[#e0d5af] relative rounded-lg"
       />
       <img
         src={img}
         alt=""
-        className="hidden md:flex w-56 h-80
+        className="hidden md:flex w-52 h-80
          shadow-lg shadow-[#e0d5af] absolute left-[29rem] "
       />
       <div className="flex flex-col gap-9">
@@ -39,9 +39,9 @@ const HomeAbout = () => {
             </h1>
             <p className="text-sm pl-9 font-Numbers font-semibold pt-2 ">
               Our artisans in Dubai put their heart into every creation. We want{" "}
-              <br />
+              <br  className="md:flex hidden"/>
               to make you happy, so we make custom jewelry that shows off your{" "}
-              <br />
+              <br className="md:flex hidden" />
               style. Let's create amazing memories together with Diana Topaz!
             </p>
           </div>
@@ -53,7 +53,7 @@ const HomeAbout = () => {
               <GiHeartNecklace className="text-[#c08f52]" />
               affordable & genuine diamonds
             </h1>
-            <p className="text-sm pl-9  font-Numbers font-semibold pt-2">
+            <p className="text-sm pl-9 text-justify  font-Numbers font-semibold pt-2">
               Make our jewelry available to majority of population by being{" "}
               <br />
               affordable using genuine stones and sustainable diamonds.

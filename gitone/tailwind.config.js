@@ -15,7 +15,9 @@ module.exports = {
         one: "url('/src/Assets/Images/bennermodels/8.jpg')",
         ring: "url('/src/Assets/Images/bennermodels/7.jpg')",
         four: "url('/src/Assets/Images/bennermodels/4.jpg')",
-        five: "url('/src/Assets/Images/bennermodels/5.jpg')"
+        five: "url('/src/Assets/Images/bennermodels/5.jpg')",
+        shop: "url('/src/Assets/Images/banner/bnr.jpg')"
+
       }
     }
   },
