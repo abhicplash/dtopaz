@@ -20,7 +20,10 @@ function Footer() {
         </Link>
         <p className="w-64 text-[#a7babb] text-center font-semibold">
           Jewellery Designed by Diana Alshehhi. Customized gold and diamonds
-          selection Deliver worldwide Order through whatsApp +9710505590994
+          selection Deliver worldwide Order through{" "}
+          <a href="https://wa.me/9710505590994/?text=let me know more about Diana Topaz">
+            whatsApp +9710505590994
+          </a>
         </p>
       </div>
       {/* <div className="flex flex-col gap-3">
