@@ -27,6 +27,7 @@ function Product() {
 
   const handleAddToCart = (product) => {
     dispatch(addToCart(product));
+    alert("Item Added to cart")
   };
   return single.length === 0 ? (
     <ProductShimmer />

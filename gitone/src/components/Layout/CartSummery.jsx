@@ -26,7 +26,7 @@ function CartSummery() {
           Service Tax:<span>5%</span>
         </h1>
         <h1 className="flex justify-between font-bold text-lg">
-          Cart Total:<span>{totalAmount - totalAmount * (5 / 100)}</span>
+          Cart Total:<span>{totalAmount + totalAmount * (5 / 100)}</span>
         </h1>
       </div>
       <div>

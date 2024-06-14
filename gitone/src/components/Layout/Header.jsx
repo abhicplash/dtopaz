@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import { FaShoppingCart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { FaBarsStaggered } from "react-icons/fa6";
-import logo from '../../Assets/logo/logo.png'
+import logo from "../../Assets/logo/logo.png";
+import { useSelector } from "react-redux";
 
 function Header() {
+  const cartItems = useSelector((state) => state.cart.cartItems);
   const [view, setView] = useState(false);
   return (
     <div
@@ -13,13 +15,13 @@ function Header() {
     >
       <Link to={"/"}>
         <div className="flex justify-center items-center ">
-          <img src={logo} alt="" className="w-20 h-14 "/>
+          <img src={logo} alt="" className="w-20 h-14 " />
           {/* <h1 className="text-3xl text-[#c08f52] hover:scale-105 duration-700 font-bold ">
             Diana Topaz
           </h1> */}
         </div>
       </Link>
-      <ul className="hidden md:flex gap-12 text- items-center font-semibold ">
+      <ul className="hidden md:flex gap-12 text- items-center font-semibold uppercase ">
         <Link to={"/"}>
           <li className="text-[#a7babb] hover:text-[#c08f52]">Home</li>
         </Link>
@@ -30,7 +32,14 @@ function Header() {
           <li className="text-[#a7babb] hover:text-[#c08f52]">Contact us</li>
         </Link>
         <Link to={"/cart"}>
-          <FaShoppingCart className="text-[#c08f52] hover:text-[#e0d5af] text-lg" />
+          <div className="relative">
+            <h1 className="absolute bg-gradient-to-tl from-[#A67c00] 
+             to-[#FFBF00] right-0 top-0 rounded-full text-[8px] w-3
+              flex justify-center items-center">
+              {cartItems.length}
+            </h1>
+            <FaShoppingCart className="te  text-[#a7babb] hover:text-[#e0d5af] text-2xl" />
+          </div>
         </Link>
       </ul>
       {view ? (
