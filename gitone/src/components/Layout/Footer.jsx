@@ -48,9 +48,9 @@ function Footer() {
         <h1 className="flex  items-center gap-3">
           <IoLocation /> Dubai ,UAE-57068
         </h1>
-        <h6 className="flex  items-center gap-3">
+        {/* <h6 className="flex  items-center gap-3">
           <IoCall /> +971 55 872 2226
-        </h6>
+        </h6> */}
         <h6 className="flex  items-center gap-3">
           <IoCall /> +971 50 559 0994
         </h6>

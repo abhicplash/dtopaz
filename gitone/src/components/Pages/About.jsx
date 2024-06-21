@@ -42,7 +42,7 @@ function About() {
             Phone Number
           </h1>
           <p className="pl-6 text-xs w-32  font-Numbers font-bold">
-            +971 55 872 2226 +971 50 559 0994
+            +971 50 559 0994
           </p>
         </div>
         <div>
