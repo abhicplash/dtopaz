@@ -78,7 +78,7 @@ function About() {
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe> */}
-        <iframe
+        <iframe title="mapLocation"
           className=" md:w-[38rem]  md:h-[18rem] h-52 w-80 "
           src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3612.073060979568!2d55.182655375379746!3d25.133220677752167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjXCsDA3JzU5LjYiTiA1NcKwMTEnMDYuOCJF!5e0!3m2!1sen!2sin!4v1718128809770!5m2!1sen!2sin"
           // src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31111.67912622277!2d77.62522299088258!3d12.910299474730188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1491bfdc6ecd%3A0xf232718439fbc879!2sHSR%20Layout%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1716512206829!5m2!1sen!2sin"
