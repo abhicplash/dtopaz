@@ -9,9 +9,11 @@ function Header() {
   const cartItems = useSelector((state) => state.cart.cartItems);
   const [view, setView] = useState(false);
   return (
+    // bg-[#2e728f]
+    // bg-[#0a2532e0]
     <div
-      className=" drop-shadow-sm bg-[#2e728f] border-b-2 z-50 relative font-Numbers 
-     border-[#a7babb] px-5 md:px-36 w-full h-14 md:h-16 flex items-center justify-between "
+      className=" drop-shadow-sm  bg-[#2e728f]  border-b-2 z-50 relative font-Numbers 
+     border-[#0131347e] px-5 md:px-36 w-full h-14 md:h-16 flex items-center justify-between "
     >
       <Link to={"/"}>
         <div className="flex justify-center items-center ">
@@ -21,7 +23,7 @@ function Header() {
           </h1> */}
         </div>
       </Link>
-      <ul className="hidden md:flex gap-12 text- items-center font-semibold uppercase ">
+      <ul className="hidden md:flex gap-12 font-org items-center font-semibold  ">
         <Link to={"/"}>
           <li className="text-[#a7babb] hover:text-[#c08f52]">Home</li>
         </Link>

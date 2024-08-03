@@ -15,7 +15,7 @@ function Layout({ children }) {
           src={whatsapp}
           alt=""
           className="fixed z-50
-       bottom-2 right-2 w-14 md:w-16"
+       bottom-2 right-2 w-14 md:w-16 "
         />
       </a>
 

@@ -52,23 +52,22 @@ function ALLjewels() {
                       alt=""
                       className="h-40 md:h-72 w-full md:mt-4  "
                     />
-                    <div className="flex justify-between items-center w-full p-3 ">
-                      <div className="text-left flex flex-col gap-1 text-[#2e728f]">
-                        <h1 className=" md:text-lg capitalize font-bold font-Numbers">
-                          {jwel.product_code}
-                        </h1>
-                        <h1 className="font-Numbers font-bold text-xs">
-                          {jwel.article}
-                        </h1>
-                        <h1 className=" font-Numbers text-sm">
-                          <span className="text-">{jwel.mrp}</span> AED
-                        </h1>
-                      </div>
-                      <Link to={"/product/" + jwel.product_id}>
-                        {/* /watch?v=" + video.id */}
+                    <Link to={"/product/" + jwel.product_id} className="w-full">
+                      <div className="flex  justify-between  items-center w-full p-3 ">
+                        <div className="text-left flex flex-col gap-1 text-[#2e728f]">
+                          <h1 className=" md:text-lg capitalize font-bold font-Numbers">
+                            {jwel.product_code}
+                          </h1>
+                          <h1 className="font-Numbers font-bold text-xs">
+                            {jwel.article}
+                          </h1>
+                          <h1 className=" font-Numbers text-sm">
+                            <span className="text-">{jwel.mrp}</span> AED
+                          </h1>
+                        </div>
                         <CiCircleChevRight className="text-4xl text-[#c08f52] font-extrabold" />
-                      </Link>
-                    </div>
+                      </div>
+                    </Link>
                   </div>
                 );
               })}
