@@ -276,7 +276,8 @@ function CartItems() {
   });
 
   return (
-    <div className="flex flex-col  md:justify-center md:flex-row items-center md:items-start  md:px-16 lg:px-32 gap-5 py-10">
+    <div className="flex flex-col  md:justify-center md:flex-row items-center md:items-start 
+     md:px-16 lg:px-32 md:gap-10 py-10">
       <div className="w-full md:w-3/4 lg:w-[70%] border rounded-xl my-10 bg-blue-50">
         <div className="flex justify-between items-center p-5">
           <h1 className="font-Numbers font-semibold text-xl md:text-2xl">
@@ -295,19 +296,21 @@ function CartItems() {
             className="border rounded-lg m-5 flex flex-col md:flex-row items-center justify-between gap-5 p-4 md:p-6 bg-white"
           >
             <div className="flex flex-col md:flex-row items-center w-full md:w-auto">
-              <img
-                src={list.image_url}
-                alt="image_jewel"
-                className="w-24 h-24 md:w-32 md:h-32 m-3 rounded-md border object-cover"
-              />
-              <div className="text-center md:text-left">
-                <h1 className="text-lg md:text-xl font-semibold text-[#15303e]">
-                  {list.product_code}
-                </h1>
-                <h1>{list.article}</h1>
+              <div className="flex justify-center items-center flex-col">
+                <img
+                  src={list.image_url}
+                  alt="image_jewel"
+                  className="w-24 h-24 md:w-32 md:h-32 m-3 rounded-md border object-cover"
+                />
+                <div className="text-center md:text-left">
+                  <h1 className="text-lg md:text-xl font-semibold text-[#15303e]">
+                    {list.product_code}
+                  </h1>
+                  <h1>{list.article}</h1>
+                </div>
               </div>
             </div>
-            <div className="flex items-center text-sm">
+            <div className="flex items-center gap-0  justify-center   text-sm">
               <FaPlus
                 onClick={() => handleAddToCart(list)}
                 className="cursor-pointer active:text-yellow-600 border rounded-full p-1 text-base md:text-xl font-bold"
@@ -316,7 +319,7 @@ function CartItems() {
                 type="text"
                 value={list.quantity}
                 readOnly
-                className="text-center w-8 mx-2"
+                className="text-center w-5   font-semibold"
               />
               <FaMinus
                 onClick={() => handleDecreaseQty(list)}
