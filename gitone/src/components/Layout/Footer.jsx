@@ -26,33 +26,37 @@ function Footer() {
           </a>
         </p>
       </div>
-      {/* <div className="flex flex-col gap-3">
-        <h1 className="font-bold text-xl font-Numbers">Links</h1>
+      <div className="flex flex-col gap-3 ">
+        <h1 className="font- text-xl font-Head">Customer Services</h1>
         <ul>
-          <Link to={"/"}>
-            <li>Home</li>
-          </Link>
           <Link to={"/contact"}>
-            <li>Contact Us</li>
+            <li className="hover:underline hover:text-blue-300">Contact</li>
           </Link>
-          <Link to={"/shop"}>
-            <li>Shop</li>
+          <Link to={"/Privacy-policy"}>
+            <li className="hover:underline hover:text-blue-300">
+              Privacy Policy
+            </li>
           </Link>
-          <Link to={"/cart"}>
-            <li>Cart</li>
+          <Link to={"/Shipping-and-Returns"}>
+            <li className="hover:underline hover:text-blue-300">
+              Shipping and Returns
+            </li>
+          </Link>
+          <Link to={"/Terms-and-Conditions"}>
+            <li className="hover:underline hover:text-blue-300">
+              Terms and Conditions
+            </li>
           </Link>
         </ul>
-      </div> */}
-      <div className="flex flex-col gap-3 text-center font-semibold">
-        {/* <h1 className="font-bold text-xl">Contact US</h1> */}
+      </div>
+      <div className="flex flex-col gap-3 text-center font-semibold ">
+        <h1 className="text-left font-thin text-xl font-Head">Contact</h1>
         <a href="https://www.google.com/maps/place/25%C2%B007'59.6%22N+55%C2%B011'06.8%22E/@25.1332207,55.1826554,17z/data=!3m1!4b1!4m4!3m3!8m2!3d25.1332207!4d55.1852303?entry=ttu">
           <h1 className="flex  items-center gap-3">
             <IoLocation /> Dubai ,UAE-57068
           </h1>
         </a>
-        {/* <h6 className="flex  items-center gap-3">
-          <IoCall /> +971 55 872 2226
-        </h6> */}
+
         <h6 className="flex  items-center gap-3">
           <IoCall /> +971 50 559 0994
         </h6>

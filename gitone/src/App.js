@@ -15,6 +15,9 @@ import BraceLetjewel from "./components/Layout/BraceLetjewel";
 import Earingjewels from "./components/Layout/Earingjewels";
 import { Provider } from "react-redux";
 import store from "./utils/store/store";
+import PrivacyPolicy from "./components/Pages/PrivacyPolicy";
+import ShippingandReturns from "./components/Pages/ShippingandReturns";
+import TermsandConditions from "./components/Pages/TermsandConditions";
 
 const App = () => {
   return (
@@ -32,6 +35,10 @@ const App = () => {
             <Route path="/bracelet" element={<BraceLetjewel />} />
             <Route path="/earing" element={<Earingjewels />} />
             <Route path="/Product/:productId" element={<Product />} />
+            <Route path="/Privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/Shipping-and-Returns" element={<ShippingandReturns />} />
+            <Route path="/Terms-and-Conditions" element={<TermsandConditions />} />
+
             <Route path="*" element={<PNF />} />
           </Routes>
         </BrowserRouter>
