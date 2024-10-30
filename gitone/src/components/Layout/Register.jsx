@@ -60,7 +60,7 @@ const Register = () => {
           <div className="flex flex-col  gap-1">
             <label>First Name</label>
             <input
-              className="h-8 px-2 rounded-lg outline-none border border-white bg-transparent"
+              className="h-8 px-2 rounded-lg outline-none w-60 bg-transparent border border-white"
               type="text"
               name="first_name"
               value={formData.first_name}
