@@ -20,6 +20,7 @@ import ShippingandReturns from "./components/Pages/ShippingandReturns";
 import TermsandConditions from "./components/Pages/TermsandConditions";
 import Register from "./components/Layout/Register";
 import Login from "./components/Layout/Login";
+import ForgotPassword from "./components/Layout/ForgotPassword";
 
 const App = () => {
   return (
@@ -31,6 +32,7 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/register" element={<Register />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/forgot-password" element={<ForgotPassword />} />
             <Route path="/Cart" element={<Cart />} />
             <Route path="/contact" element={<About />} />
             <Route path="/Shop" element={<ALLjewels />} />

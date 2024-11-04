@@ -119,10 +119,13 @@ const Register = () => {
             Register
           </button>
           <p className="text-center">
-            Already a Member <Link to={"/login"} className="underline">Sign In </Link>
+            Already a Member{" "}
+            <Link to={"/login"} className="underline">
+              Sign In{" "}
+            </Link>
           </p>
         </form>
-        {message && <p>{message}</p>}
+        {message && <p className="text-white">{message}</p>}
       </div>
     </div>
   );
