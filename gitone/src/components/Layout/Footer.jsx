@@ -7,16 +7,13 @@ import logo from "../../Assets/logo/logo.png";
 function Footer() {
   return (
     <div
-      className="bg-[#2e728f] text-[#a7babb]  relative z-40
-    font-Numbers border-t border-[#e0d5af] w-full md:h-80   md:flex-row flex-col
+      className="bg-gradient-to-b from-[#0d2535] to-[#053351] text-[#a7babb]  relative z-40
+    font-org border-t border-[#e0d5af] w-full md:h-80   md:flex-row flex-col
     flex justify-between md:px-32 items-center gap-10 py-12 md:py-0 "
     >
       <div className="flex-col flex  justify-center items-center">
         <Link to={"/"}>
           <img src={logo} alt="" className="w-40 h-36 " />
-          {/* <h1 className="text-4xl font-bold text-[#c08f52] text-center md:text-left">
-            Diana Topaz
-          </h1> */}
         </Link>
         <p className="w-64 text-[#a7babb] text-center font-semibold">
           Jewellery Designed by Diana Alshehhi. Customized gold and diamonds
@@ -27,7 +24,7 @@ function Footer() {
         </p>
       </div>
       <div className="flex flex-col gap-3 ">
-        <h1 className="font- text-xl font-Head">Customer Services</h1>
+        <h1 className="font- text-xl font-org">Customer Services</h1>
         <ul>
           <Link to={"/contact"}>
             <li className="hover:underline hover:text-blue-300">Contact</li>
@@ -49,8 +46,8 @@ function Footer() {
           </Link>
         </ul>
       </div>
-      <div className="flex flex-col gap-3 text-center font-semibold ">
-        <h1 className="text-left font-thin text-xl font-Head">Contact</h1>
+      <div className="flex flex-col gap-3 md:items-start items-center md:justify-center text-center font-semibold ">
+        <h1 className="text-left font-thin text-xl font-org">Contact</h1>
         <a href="https://www.google.com/maps/place/25%C2%B007'59.6%22N+55%C2%B011'06.8%22E/@25.1332207,55.1826554,17z/data=!3m1!4b1!4m4!3m3!8m2!3d25.1332207!4d55.1852303?entry=ttu">
           <h1 className="flex  items-center gap-3">
             <IoLocation /> Dubai ,UAE-57068

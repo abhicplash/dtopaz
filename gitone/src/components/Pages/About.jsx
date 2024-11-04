@@ -20,7 +20,7 @@ function About() {
       items-center text-[#c08f52]"
       >
         <h1 className="text-5xl font-org w-full text-center h-full flex items-center justify-center
-          text-[#f3f3f3] bg-[#05476853]">Contact Us</h1>
+          text-[#f3f3f3] bg-[#00000088]">Contact Us</h1>
       </div>
       <div
         className="w-full md:px-32 flex md:flex-row flex-col

@@ -19,7 +19,9 @@ function Header() {
 
   return (
     <div>
-      <div className="drop-shadow-sm bg-[#2e728f] border-b-2 z-40 relative font-Numbers border-[#0131347e] px-5 md:px-36 w-full h-14 md:h-16 flex items-center justify-between">
+      <div className="drop-shadow-sm absolute  z-40
+       font-Numbers  px-5 md:px-36 w-full
+        h-14 md:h-16 flex items-center justify-between">
         <Link to={"/"}>
           <div className="flex justify-center items-center ">
             <img src={logo} alt="" className="w-20 h-14 " />
@@ -27,21 +29,21 @@ function Header() {
         </Link>
         <ul className="hidden md:flex gap-12 font-org items-center font-semibold">
           <Link to={"/"}>
-            <li className="text-[#a7babb] hover:text-[#c08f52]">Home</li>
+            <li className=" hover:text-[#a7babb] text-[#c08f52]">Home</li>
           </Link>
           <Link to={"/shop"}>
-            <li className="text-[#a7babb] hover:text-[#c08f52]">Shop</li>
+            <li className=" hover:text-[#a7babb] text-[#c08f52]">Shop</li>
           </Link>
           <Link to={"/contact"}>
-            <li className="text-[#a7babb] hover:text-[#c08f52]">Contact us</li>
+            <li className=" hover:text-[#a7babb] text-[#c08f52]">Contact us</li>
           </Link>
-          {isLoggedIn ? ( // Conditional rendering
-            <li className="text-[#a7babb] hover:text-[#c08f52] cursor-pointer" onClick={handleLogout}>
+          {isLoggedIn ? ( 
+            <li className=" hover:text-[#a7babb] text-[#c08f52] cursor-pointer" onClick={handleLogout}>
               Log Out
             </li>
           ) : (
             <Link to={"/login"}>
-              <li className="text-[#a7babb] hover:text-[#c08f52] cursor-pointer">Login</li>
+              <li className=" hover:text-[#a7babb] text-[#c08f52] cursor-pointer">Login</li>
             </Link>
           )}
           <Link to={"/cart"}>

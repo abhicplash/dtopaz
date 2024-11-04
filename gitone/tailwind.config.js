@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       fontFamily: {
         mubu: ["Dancing Script", "cursive"],
+        newfont:[ "Oxanium", "sans-serif"],
         Rampart: ["Rampart One", "cursive"],
         Head: ["Quattrocento Sans", "sans-serif"],
         org: ["Playfair Display", "serif"],

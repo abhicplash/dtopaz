@@ -9,7 +9,7 @@ function ShopLayout({ children }) {
       items-center"
       >
         <h1 className="text-5xl font-org w-full text-center h-full flex items-center justify-center
-          text-[#f3f3f3] bg-[#05476853] ">
+          text-[#f3f3f3]  bg-[#00000088] ">
           Shop
         </h1>
       </div>
