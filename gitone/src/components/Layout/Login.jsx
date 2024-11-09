@@ -25,6 +25,9 @@ const Login = () => {
 
       if (response.ok) {
         const data = await response.json();
+        sessionStorage.setItem("authToken", data.data.token);
+        const savedToken = sessionStorage.getItem("authToken");
+        console.log("Token saved in sessionStorage:", savedToken);
         setMessage("Login successful");
         dispatch(login(data.user));
         navigate("/");

@@ -21,6 +21,9 @@ import TermsandConditions from "./components/Pages/TermsandConditions";
 import Register from "./components/Layout/Register";
 import Login from "./components/Layout/Login";
 import ForgotPassword from "./components/Layout/ForgotPassword";
+import PersonalInfo from "./components/Pages/PersonalInfo";
+import ProvideInformation from "./components/Pages/ProvideInformation";
+import OrderHistory from "./components/Pages/OrderHistory";
 
 const App = () => {
   return (
@@ -29,29 +32,38 @@ const App = () => {
         <BrowserRouter>
           <ScrollToTop />
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/register" element={<Register />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/forgot-password" element={<ForgotPassword />} />
-            <Route path="/Cart" element={<Cart />} />
-            <Route path="/contact" element={<About />} />
-            <Route path="/Shop" element={<ALLjewels />} />
-            <Route path="/necklace" element={<NecklaceJewel />} />
-            <Route path="/ring" element={<Ringjewels />} />
-            <Route path="/bracelet" element={<BraceLetjewel />} />
-            <Route path="/earing" element={<Earingjewels />} />
-            <Route path="/Product/:productId" element={<Product />} />
-            <Route path="/Privacy-policy" element={<PrivacyPolicy />} />
+            <Route exact path="/" element={<Home />} />
+            <Route exact path="/register" element={<Register />} />
+            <Route exact path="/login" element={<Login />} />
+            <Route exact path="/forgot-password" element={<ForgotPassword />} />
+            <Route exact path="/Cart" element={<Cart />} />
+            <Route exact path="/contact" element={<About />} />
+            <Route exact path="/Shop" element={<ALLjewels />} />
+            <Route exact path="/necklace" element={<NecklaceJewel />} />
+            <Route exact path="/ring" element={<Ringjewels />} />
+            <Route exact path="/bracelet" element={<BraceLetjewel />} />
+            <Route exact path="/earing" element={<Earingjewels />} />
+            <Route exact path="/Product/:productId" element={<Product />} />
+            <Route exact path="/Privacy-policy" element={<PrivacyPolicy />} />
             <Route
+              exact
               path="/Shipping-and-Returns"
               element={<ShippingandReturns />}
             />
             <Route
+              exact
               path="/Terms-and-Conditions"
               element={<TermsandConditions />}
             />
 
-            <Route path="*" element={<PNF />} />
+            <Route exact path="/personal" element={<PersonalInfo />} />
+            <Route
+              exact
+              path="/provideInformation"
+              element={<ProvideInformation />}
+            />
+            <Route exact path="/OrderHistory" element={<OrderHistory />} />
+            <Route exact path="*" element={<PNF />} />
           </Routes>
         </BrowserRouter>
       </div>
