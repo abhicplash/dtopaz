@@ -25,6 +25,7 @@ import PersonalInfo from "./components/Pages/PersonalInfo";
 import ProvideInformation from "./components/Pages/ProvideInformation";
 import OrderHistory from "./components/Pages/OrderHistory";
 import PaymentMethods from "./components/Pages/PaymentMethods";
+import PaymentProcess from "./components/Pages/PaymentProcess";
 
 const App = () => {
   return (
@@ -47,6 +48,7 @@ const App = () => {
             <Route exact path="/Product/:productId" element={<Product />} />
             <Route exact path="/Privacy-policy" element={<PrivacyPolicy />} />
             <Route exact path="/PaymentMethods" element={<PaymentMethods />} />
+            <Route exact path="/PaymentProcess" element={<PaymentProcess />} />
             <Route
               exact
               path="/Shipping-and-Returns"
