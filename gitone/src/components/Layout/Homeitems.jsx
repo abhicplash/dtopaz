@@ -13,7 +13,7 @@ import all from "../../Assets/home/all.png";
 
 function Homeitems() {
   return (
-    <div>
+    <div className="text-[#15303e]">
       <h1 className="text-5xl font-org text-center py-6">Feature Products</h1>
       <div className=" flex py-8 flex-wrap justify-center gap-5">
         <Link to={"/ring"}>

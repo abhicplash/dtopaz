@@ -1,81 +1,167 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import SideBar from "../Layout/SideBar";
-import Layout from "../Layout/Layout";
 
 const ProvideInformation = () => {
+  const [addressData, setAddressData] = useState({
+    building_no: "",
+    apartment: "",
+    block: "",
+    street: "",
+    area: "",
+    zip_code: "",
+    country: "",
+    country_code: "",
+    phone: "",
+    city: "",
+  });
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+  const [success, setSuccess] = useState("");
+
+  // Fetch address data on component mount
+  useEffect(() => {
+    const fetchAddress = async () => {
+      const savedToken = sessionStorage.getItem("authToken");
+      if (!savedToken) {
+        setError("Authorization token is missing.");
+        return;
+      }
+      try {
+        setLoading(true);
+        const response = await fetch("https://api.dtopaz.com/api/customer/address", {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${savedToken}`,
+          },
+        });
+
+        if (!response.ok) {
+          throw new Error("Failed to fetch address data. Please try again.");
+        }
+
+        const result = await response.json();
+        setAddressData(result.data || {});
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchAddress();
+  }, []);
+
+  // Handle input changes
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setAddressData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  // Save updated address data
+  const saveData = async (e) => {
+    e.preventDefault();
+    setError("");
+    setSuccess("");
+
+    const savedToken = sessionStorage.getItem("authToken");
+    if (!savedToken) {
+      setError("Authorization token is missing.");
+      return;
+    }
+
+    try {
+      setLoading(true);
+      const response = await fetch("https://api.dtopaz.com/api/customer/address", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${savedToken}`,
+        },
+        body: JSON.stringify(addressData),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to save address data. Please try again.");
+      }
+
+      setSuccess("Address updated successfully!");
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
-    <Layout>
-      <div
-        className="w-full h-72 bg-shop bg-center bg-cover  flex justify-center 
-      items-center"
-      >
-        <h1
-          className="text-5xl font-org w-full text-center h-full flex items-center justify-center
-          text-[#f3f3f3]  bg-[#00000088] "
-        >
-          My Account
-        </h1>
-      </div>
-      <div className="font-org flex md:flex-row flex-col md:w-full py-5 md:px-16 gap-5">
-        <SideBar />
-        <div className="w-full flex justify-center items-center">
-          <div className="flex flex-col w-[96%] md:w-[80%]  border border-[#42738f]">
-            <h1 className="w-full h-14 bg-[#42738f] text-white text-xl flex items-center justify-center">
-              Enter Your Information
-            </h1>
-            <div className="flex flex-col py-5 gap-3 font-org text-[#42738f] text-lg">
-              <div className="flex px-2 gap-2 flex-col md:flex-row justify-center">
-                <label className="md:w-[30%]  ">Full Name :</label>
-                <input
-                  type="text"
-                  name=""
-                  id=""
-                  className="border-[#42738f] border md:w-48 outline-none"
-                />
-              </div>
-              <div className="flex px-2 gap-2 flex-col md:flex-row justify-center">
-                {/* <h1>Date Of Birth :</h1> */}
-                <label className="md:w-[30%]   ">Date Of Birth :</label>
+    <div className="max-w-lg mx-auto p-6 bg-white shadow-md rounded-md mt-10">
+      <SideBar />
+      <h2 className="text-2xl font-bold text-center mb-6 text-indigo-600">
+        Update Address Information
+      </h2>
 
-                <input
-                  type="date"
-                  name=""
-                  id=""
-                  className="border-[#42738f] border md:w-48 outline-none"
-                />
-              </div>
-              <div className="flex px-2 gap-2 flex-col md:flex-row justify-center">
-                <label className="md:w-[30%]   ">Phone Number :</label>
-
-                <input
-                  type="text"
-                  name=""
-                  id=""
-                  className="border-[#42738f] border md:w-48 outline-none"
-                />
-              </div>
-              <div className="flex px-2 gap-2 flex-col md:flex-row justify-center">
-                <label className="md:w-[30%]  ">Email Address :</label>
-
-                <input
-                  type="email"
-                  name=""
-                  id=""
-                  className="border-[#42738f] border md:w-48 outline-none"
-                />
-              </div>
-              <div className="flex px-2 gap-2 flex-col md:flex-row justify-center items-start">
-                <label className="md:w-[30%] ">Address</label>
-                <textarea
-                  className="border-[#42738f] border md:w-48
-                 h-36 outline-none w-full"
-                ></textarea>
-              </div>
-            </div>
-          </div>
+      {/* Loading state */}
+      {loading && (
+        <div className="text-center text-gray-600 py-4">
+          <p>Loading...</p>
         </div>
-      </div>
-    </Layout>
+      )}
+
+      {/* Error Message */}
+      {error && (
+        <div className="text-center text-red-500 py-2">
+          <p>{error}</p>
+        </div>
+      )}
+
+      {/* Success Message */}
+      {success && (
+        <div className="text-center text-green-500 py-2">
+          <p>{success}</p>
+        </div>
+      )}
+
+      {/* Address Form */}
+      <form onSubmit={saveData} className="space-y-5">
+        {[
+          "building_no",
+          "apartment",
+          "block",
+          "street",
+          "area",
+          "zip_code",
+          "country",
+          "country_code",
+          "phone",
+          "city",
+        ].map((field) => (
+          <div key={field}>
+            <label
+              htmlFor={field}
+              className="block text-sm font-medium text-gray-700 capitalize"
+            >
+              {field.replace("_", " ")}
+            </label>
+            <input
+              id={field}
+              type="text"
+              name={field}
+              value={addressData[field]}
+              onChange={handleChange}
+              placeholder={`Enter ${field.replace("_", " ")}`}
+              className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+            />
+          </div>
+        ))}
+
+        <button
+          type="submit"
+          className="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 transition duration-200"
+        >
+          Save Address
+        </button>
+      </form>
+    </div>
   );
 };
 

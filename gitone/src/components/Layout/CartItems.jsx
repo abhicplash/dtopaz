@@ -247,6 +247,7 @@ import {
   decreaseQuantity,
   removeItem
 } from "../../utils/store/cartSlice";
+import { Link } from "react-router-dom";
 
 function CartItems() {
   const cartItems = useSelector((state) => state.cart.cartItems);
@@ -276,8 +277,10 @@ function CartItems() {
   });
 
   return (
-    <div className="flex flex-col  md:justify-center md:flex-row items-center md:items-start 
-     md:px-16 lg:px-32 md:gap-10 py-10">
+    <div
+      className="flex flex-col  md:justify-center md:flex-row items-center md:items-start 
+     md:px-16 lg:px-32 md:gap-10 py-10"
+    >
       <div className="w-full md:w-3/4 lg:w-[70%] border rounded-xl my-10 bg-blue-50">
         <div className="flex justify-between items-center p-5">
           <h1 className="font-Numbers font-semibold text-xl md:text-2xl">
@@ -358,9 +361,11 @@ function CartItems() {
             </h1>
           </div>{" "}
           <div className="flex justify-center">
-            <button className="bg-black py-2 text-white px-10 rounded-lg w-full md:w-48">
-              Checkout
-            </button>
+            <Link to={"/PaymentMethods"}>
+              <button className="bg-black py-2 text-white px-10 rounded-lg w-full md:w-48">
+                Proceed to Pay
+              </button>
+            </Link>
           </div>
         </div>
       </div>

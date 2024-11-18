@@ -24,6 +24,7 @@ import ForgotPassword from "./components/Layout/ForgotPassword";
 import PersonalInfo from "./components/Pages/PersonalInfo";
 import ProvideInformation from "./components/Pages/ProvideInformation";
 import OrderHistory from "./components/Pages/OrderHistory";
+import PaymentMethods from "./components/Pages/PaymentMethods";
 
 const App = () => {
   return (
@@ -45,6 +46,7 @@ const App = () => {
             <Route exact path="/earing" element={<Earingjewels />} />
             <Route exact path="/Product/:productId" element={<Product />} />
             <Route exact path="/Privacy-policy" element={<PrivacyPolicy />} />
+            <Route exact path="/PaymentMethods" element={<PaymentMethods />} />
             <Route
               exact
               path="/Shipping-and-Returns"
